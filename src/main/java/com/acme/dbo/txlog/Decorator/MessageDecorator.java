@@ -19,7 +19,7 @@ public class MessageDecorator {
     }
 
     public static String decorate(boolean message) {
-        return PRIMITIVE_PREFIX + message +"@";
+        return PRIMITIVE_PREFIX + message;
     }
 
     public static String decorate(Object message) {
