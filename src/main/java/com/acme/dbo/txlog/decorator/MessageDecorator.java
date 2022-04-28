@@ -1,4 +1,4 @@
-package com.acme.dbo.txlog.Decorator;
+package com.acme.dbo.txlog.decorator;
 
 public class MessageDecorator {
     private static final String PRIMITIVE_PREFIX = "primitive: ";

@@ -1,4 +1,4 @@
-package com.acme.dbo.txlog.Printer;
+package com.acme.dbo.txlog.printer;
 
 public class ConsolePrinter {
     public static void printDecoratedMessage(String message) {
