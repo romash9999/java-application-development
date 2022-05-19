@@ -13,19 +13,7 @@ public class Facade {
     private static state currentState = state.UNDEFINED;
 
     public static void log(int message) {
-        switch (currentState){
-            case UNDEFINED:
-                currentState = state.INTEGER;
-                integerAccumulator = message;
-                break;
-            case STRING:
-                flush();
-                currentState = state.INTEGER;
-                integerAccumulator = message;
-                break;
-            case INTEGER:
-                integerAccumulator = integerAccumulator + message;
-        }
+    LogService.log(message);
     }
 
     public static void log(byte message) {
@@ -35,26 +23,7 @@ public class Facade {
         printDecoratedMessage(decorate(message));
     }
     public static void log(String message) {
-        switch (currentState){
-            case UNDEFINED:
-                currentState = state.STRING;
-                stringPattern = message;
-                break;
-            case STRING:
-                if(message.equals(stringPattern)) {
-                    numberStringPattern+=1;
-                }
-                else{
-                    flush();
-                    stringPattern = message;
-                    numberStringPattern = 1;
-                }
-                break;
-            case INTEGER:
-                flush();
-                stringPattern = message;
-                currentState = state.STRING;
-        }
+        LogService.log(message);
     }
     public static void log(boolean message) {
         printDecoratedMessage(decorate(message));
