@@ -20,7 +20,7 @@ public class StringMessage implements Message {
     @Override
     public String save() {
         //System.out.println(decorate(PREFIX,pattern+" x("+numberPatterns + ")"));
-        consoleSever.save(decorate(PREFIX,pattern+" x("+numberPatterns + ")"));
+        consoleSever.save(decorate(PREFIX,pattern+" (x"+numberPatterns + ")"));
         return null;
     }
     private void flushAccum(){

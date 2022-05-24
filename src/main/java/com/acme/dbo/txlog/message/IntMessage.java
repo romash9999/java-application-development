@@ -11,7 +11,7 @@ public class IntMessage implements Message {
     private final int value;
     private static int sumAccum = 0;
     private final LoggerState localState = LoggerState.INTEGER;
-    private final String PREFIX = "Integer: ";
+    private final String PREFIX = "primitive: ";
     ConsoleSever consoleSever = new ConsoleSever();
 
     public IntMessage(int message){

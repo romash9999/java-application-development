@@ -1,7 +1,8 @@
 package com.acme.dbo.txlog.message;
 
-public class Message {
-    private String getDecoratedMessage (String prefix, String message){
-        return prefix+message;
-    }
+import com.acme.dbo.txlog.logger.LoggerState;
+
+public interface Message {
+    String save();
+    LoggerState changeState(LoggerState state);
 }
